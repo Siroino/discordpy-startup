@@ -21,5 +21,16 @@ async def ping(ctx):
 async def name(ctx):
     await ctx.send('Torisan')
 
+@bot.command()
+async def name(ctx):
+    await ctx.send('Torisan')
+    
+import random
+list = ["刀","扇", "薙", "銃", "忍", "傘", "書", "毒", "絡", "騎", "古", "琵", "炎", "笛", "戦", "社","経", "絆","機", "新","爪","拒", "鎌", "塵", "旗","橇","鏡","櫂","兜", "槌","嵐"]
+random.shuffle(list)
+
+@bot.command()
+async def megami3(ctx):
+    await ctx.send('str(list[0]+list[1]+list[2])+"とかで良いんじゃないですか？"')
 
 bot.run(token)
