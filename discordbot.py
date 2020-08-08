@@ -34,6 +34,10 @@ random.shuffle(list)
 
 @bot.command()
 async def megami3(ctx):
-    await ctx.send('str(list[0]+list[1]+list[2])+"とかで良いんじゃないですか？"')
+    await ctx.send(str(list[0]+list[1]+list[2])+"とかで良いんじゃないですか？")
+    
+@bot.command()
+async def megami2(ctx):
+    await ctx.send(str(list[0]+list[1])+"とかで良いんじゃないですか？")
 
 bot.run(token)
