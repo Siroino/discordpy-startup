@@ -57,6 +57,7 @@ async def on_message(message):
 @bot.command()
 def setup(bot):
     print("ロード完了")
+   
 
 
 
