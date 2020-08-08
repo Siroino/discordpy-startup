@@ -12,6 +12,13 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
+from discord.ext.commands import CommandNotFound
+
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, CommandNotFound):
+        return
+    raise error
 
 @bot.command()
 async def ping(ctx):
