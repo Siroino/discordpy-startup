@@ -39,5 +39,8 @@ async def megami3(ctx):
 @bot.command()
 async def megami2(ctx):
     await ctx.send(str(list[0]+list[1])+"とかで良いんじゃないですか？")
+    
+def setup(bot):
+    print("ロード完了")
 
 bot.run(token)
