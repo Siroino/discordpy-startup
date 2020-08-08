@@ -18,7 +18,7 @@ async def ping(ctx):
     await ctx.send('pong')
     
 @bot.command()
-async def What's your name?(ctx):
+async def name?(ctx):
     await ctx.send('gm')
 
 
