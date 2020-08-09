@@ -30,7 +30,7 @@ async def name(ctx):
 
 @bot.command()
 async def version(ctx):
-    await ctx.send('ver1')
+    await ctx.send('ver2')
     
 
 list = ["刀","扇", "薙", "銃", "忍", "傘", "書", "毒", "絡", "騎", "古", "琵", "炎", "笛", "戦", "社","経", "絆","機", "新","爪","拒", "鎌", "塵", "旗","橇","鏡","櫂","兜", "槌","嵐"]
@@ -45,7 +45,7 @@ async def megami3(ctx):
     
 @bot.command()
 async def megami2(ctx):
-    await random.shuffle(list)
+    random.shuffle(list)
     await ctx.send(str(list[0]+list[1])+"とかで良いんじゃないですか？")
     
 @bot.event
@@ -59,7 +59,13 @@ async def on_message(message):
 def setup(bot):
     print("ロード完了")
    
-
+@bot.event
+if (message.content === 'restart') {
+  if (message.author.id !== '#4495') return;
+  message.channel.send('Restarted.').then(() => {
+  process.exit(1);
+})
+};
 
 
 
