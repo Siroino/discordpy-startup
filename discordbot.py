@@ -365,6 +365,12 @@ async def on_message(message):
             m = "torisan"
             await message.channel.send(m)
             
+    if message.content.startswith("pick"):
+        if client.user != message.author:
+            random.shuffle(listN)
+            m = "左から" + str(listN[0]) + "番目をピックするのがオススメです！"
+            await message.channel.send(m)
+            
     if message.content == "cube":
         if client.user != message.author:
             result = [random.randint(1, 6) for i in range(78)]
